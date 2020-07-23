@@ -7,6 +7,8 @@ I chose developing a game because it's one of my passions and its extremely inte
 
 The game is still in development, however an executable file is available (application.windows32).
 
+Photo previews of the executable file are available.
+
 Next Updates:
 - Display a counter for which player wins in each scene
 - Add different projectile images
