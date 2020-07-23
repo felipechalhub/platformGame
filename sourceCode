@@ -434,7 +434,6 @@ class Timer {
 
   }
 }
-
  class Player {
 
   //PLAYER1
@@ -706,7 +705,6 @@ class Timer {
 
   
 }
-
 void drawButton(float x, float y, float w, float h, color filling, String caption){
   fill(filling);
   stroke(255);
@@ -731,6 +729,7 @@ void drawButton2(float x, float y, float w, float h, color filling, String capti
   text(caption,x,y);
 }
 
+
 class health{
 
   float healthX, healthY;
@@ -753,7 +752,6 @@ health(float _healthX, float _healthY){
   }
   
 }
-
   class Bullet {
   float w, h, x, y;
   float halfWidth, halfHeight;
@@ -835,7 +833,6 @@ health(float _healthX, float _healthY){
   }
 
 }
-
 void mousePressed(){
    if(mousePressed){
      if(scn==0 && mouseX>(width/2)-40 && mouseX<(width/2)+40 && mouseY> 390 && mouseY<430)
@@ -848,7 +845,6 @@ void mousePressed(){
   
   
 }
-
 color fill1 = color(148,0,211);
 void scene0(){
   drawButton((width/2),(height/2)-100,80,40,fill1,"PLAY");
@@ -1035,7 +1031,6 @@ void scene1() {
     p2.checkPlatforms2();
   }
 }
-
 
 void scene2(){
   background(bk2);
@@ -1224,7 +1219,6 @@ void scene2(){
 
   
 }
-
 void scene3(){
   background(bk3);
   platform4 = loadImage("platform_16.png");
@@ -1282,6 +1276,23 @@ void scene3(){
     if(zombieHealth.size() == 0 || p1.y > height-100 ){
       scn=9;
      robotWin +=1 ;
+     
+  zombieHealth = new ArrayList<health>();
+  zombieHealth.add(new health(700, 100));
+  zombieHealth.add(new health(750, 100));
+  zombieHealth.add(new health(800, 100));
+  zombieHealth.add(new health(850, 100));
+  zombieHealth.add(new health(900, 100));
+  zombieHealth.add(new health(950, 100));
+    
+   robotHealth = new ArrayList<health>();
+  robotHealth.add(new health(100, 100));
+  robotHealth.add(new health(150, 100));
+  robotHealth.add(new health(200, 100));
+  robotHealth.add(new health(250, 100));
+  robotHealth.add(new health(300, 100));
+  robotHealth.add(new health(350, 100));
+  
      print(robotWin);
      p1.resetPlayer1();
      p2.resetPlayer2();
@@ -1301,6 +1312,23 @@ void scene3(){
     if(robotHealth.size() == 0 ||  p2.y2 > height-100 ){
         scn=9;
         zombieWin +=1 ;
+        
+  zombieHealth = new ArrayList<health>();
+  zombieHealth.add(new health(700, 100));
+  zombieHealth.add(new health(750, 100));
+  zombieHealth.add(new health(800, 100));
+  zombieHealth.add(new health(850, 100));
+  zombieHealth.add(new health(900, 100));
+  zombieHealth.add(new health(950, 100));
+    
+   robotHealth = new ArrayList<health>();
+  robotHealth.add(new health(100, 100));
+  robotHealth.add(new health(150, 100));
+  robotHealth.add(new health(200, 100));
+  robotHealth.add(new health(250, 100));
+  robotHealth.add(new health(300, 100));
+  robotHealth.add(new health(350, 100));
+  
      p1.resetPlayer1();
      p2.resetPlayer2();
 
@@ -1366,8 +1394,6 @@ void scene3(){
   }
 
 }
-
-
 void scene9(){
   background(0);
   drawButton2(400,250,80,40,fill1,"Menu");
